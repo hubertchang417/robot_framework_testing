@@ -31,9 +31,10 @@ class Custom_GoogleSearch1:
     def search_target(self,target):
         se = self.driver.find_element(By.XPATH,"//input[@class='gLFyf gsfi']")
         se.send_keys(target)
-        se_bnt = self.driver.find_element(By.XPATH,"//input[@class='gNO89b']")
+        se_bnt = self.driver.find_element(By.XPATH,"/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")
+        #ActionChains(se_bnt).click().perform()
         se_bnt.click()
-    
+        sleep(2)
     def find_site(self, target, count = 1):
         #target = '維基百科'
         if count>5:
